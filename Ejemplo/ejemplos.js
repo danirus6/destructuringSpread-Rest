@@ -46,3 +46,46 @@ console.log(nombrePersona)
 
 // const { nombre, email: correo, edad = 38 } = usuario
 // console.log(edad)
+
+
+//Operador Spread
+
+const arrayMin = [2, 5, 7, 1, 9]
+
+const minimo = Math.min(...arrayMin)
+
+console.log(minimo)
+
+//concatenar Arrays y mergear Objetos
+const array1 = ['patata', 'tomate', 'lechuga']
+const array2 = [1, true, 'chocolate']
+
+const concatenarArrays = [...array1, ...array2]
+console.log(concatenarArrays)
+
+const objeto1 = { a: 10, b: 'caracola' }
+const objeto2 = { c: 2, d: 'cocacola' }
+
+const mergearObjetos = { ...objeto1, ...objeto2 }
+console.log(mergearObjetos)
+
+//Operador Rest
+// const usuario = {
+//     nombre: 'Laura',
+//     email: 'laura@gmail.com',
+//     edad: 31,
+//     registrado: false,
+//     seguidores: ['Ger', 'Gabriel', 'Angela']
+// }
+
+// const { edad, registrado, ...loDemas } = usuario
+// console.log(loDemas)
+
+
+function listarArticulos(...articulos) {
+    console.log(articulos);
+}
+
+listarArticulos('Hola', 2, true, { a: 3, c: 17 }, [1, 2, 3, 4])
+listarArticulos('Tarjeta de credito', 'Paragüas', 'Mochila')
+listarArticulos(2)
