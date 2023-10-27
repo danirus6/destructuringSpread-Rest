@@ -89,4 +89,24 @@ function addOnlyNums(...allArray) {
     console.log(result)
 }
 
-addOnlyNums(1, "perro", 2, 4)
+addOnlyNums(1, "perro", 2, 4);
+
+//2.4
+function countTheArgs(...args) {
+    return args.length;
+}
+
+console.log(countTheArgs('gato', 'perro')); // 2
+console.log(countTheArgs('gato', 'perro', 'pollo', 'oso')); // 4
+
+
+//2.5
+function combineTwoArrays(array1, array2) {
+    return [...array1, ...array2];
+}
+
+const arrayA = [1, 2, 3];
+const arrayB = ['a', 'b', 'c'];
+const combinedArray = combineTwoArrays(arrayA, arrayB);
+
+console.log(combinedArray);
